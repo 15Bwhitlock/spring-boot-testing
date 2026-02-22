@@ -22,9 +22,10 @@ public class ProductRestController {
     }
 
     //TODO: Endpoint GET - url `/find`
+    @GetMapping("/find")
     public Product findProductByName(@RequestParam String name) {
         //TODO: Realize the logic of getting the `Product` by name from the service
-        return null;
+         return productService.getProductByName(name);
     }
 }
 
